@@ -1,0 +1,26 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  discussion_comment:
+    branches: [ "master" ]
+  workflow_dispatch:
+  
+  
+env:
+  IMAGE_NAME: authservice
+  IMAGE_TAG: ${{ github.run_id }}
+
+jobs:
+
+  build-image:
+    name: Build Container Image
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag $IMAGE_NAME:$IMAGE_TAG
