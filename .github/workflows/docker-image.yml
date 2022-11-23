@@ -6,7 +6,10 @@ on:
   pull_request:
     branches: [ "master" ]
   discussion_comment:
-    branches: [ "master" ]
+  pull_request_review_comment:
+  discussion:
+  issue_comment:
+  pull_request_review:
   workflow_dispatch:
   
   
