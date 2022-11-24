@@ -1,19 +1,28 @@
 name: Docker Image CI
 
 on:
+#   push:
+#     branches: [ "master" ]
+#   pull_request:
+#     branches: [ "master" ]
   discussion_comment:
+    branches: [ "master" ]
     types:
       [created,deleted]
   pull_request_review_comment:
+    branches: [ "master" ]
     types:
       [created,deleted]
   discussion:
+    branches: [ "master" ]
     types:
       [created,deleted]
   issue_comment:
+    branches: [ "master" ]
     types:
       [created,deleted]
   pull_request_review:
+    branches: [ "master" ]
     types:
       [created,deleted]
   workflow_dispatch:
