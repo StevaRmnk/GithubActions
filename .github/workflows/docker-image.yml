@@ -6,25 +6,20 @@ on:
   pull_request:
     branches: [ "master" ]
   discussion_comment:
-    branches: [ "master" ]
     types:
-      [created,deleted]
+      [created,edited,deleted]
   pull_request_review_comment:
-    branches: [ "master" ]
     types:
-      [created,deleted]
+      [created,edited,deleted]
   discussion:
-    branches: [ "master" ]
     types:
-      [created,deleted]
+      [created,edited,deleted]
   issue_comment:
-    branches: [ "master" ]
     types:
-      [created,deleted]
+      [created,edited,deleted]
   pull_request_review:
-    branches: [ "master" ]
     types:
-      [created,deleted]
+      [created,edited,deleted]
   workflow_dispatch:
   
   
