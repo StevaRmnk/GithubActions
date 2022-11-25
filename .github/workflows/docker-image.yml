@@ -1,10 +1,10 @@
 name: Docker Image CI
 
 on:
-#   push:
-#     branches: [ "master" ]
-#   pull_request:
-#     branches: [ "master" ]
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
   discussion_comment:
     types:
       [created,edited,deleted]
@@ -31,8 +31,7 @@ jobs:
 
   build-image:
     name: Build Container Image
-    runs-on: ubuntu-latest
-
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
