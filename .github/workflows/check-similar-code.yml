@@ -1,8 +1,7 @@
 name: Checking similiar code
 
 on:
-  push:
-    branches: [ "master" ]
+  pull_request:
   workflow_dispatch:
 
 jobs: 
@@ -11,3 +10,5 @@ jobs:
     runs-on: self-hosted
     steps:
     - uses: platisd/duplicate-code-detection-tool@1.1.0
+      with:
+        directories: "src/, .github/workflows"
