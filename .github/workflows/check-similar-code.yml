@@ -1,1 +1,13 @@
+name: Checking similiar code
 
+on:
+  push:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+jobs: 
+  check_for_similar_code:
+    name: Duplicate code detection tool
+    runs-on: self-hosted
+    steps:
+    - uses: platisd/duplicate-code-detection-tool@1.1.0
